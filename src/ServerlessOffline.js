@@ -442,7 +442,7 @@ module.exports = class ServerlessOffline {
         http: {
           integration: 'lambda',
           method: 'POST',
-          path: `{apiVersion}/functions/${fun.name}/invocations`,
+          path: `{apiVersion}/functions/${fun.handler}/invocations`,
           request: {
             template: {
               // AWS SDK for NodeJS specifies as 'binary/octet-stream' not 'application/json'
